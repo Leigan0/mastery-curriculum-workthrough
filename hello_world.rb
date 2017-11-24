@@ -17,7 +17,7 @@ puts 5 <= 10 #true less than or equal to
 puts 5 == 5 #true - equal to
 puts 5 != 6 #true - does not equal
 
-logical operators
+#logical operators
 
 puts true && true #true - evaluates to true if both 'true'
 puts false && true #false - evaluates false if one false
@@ -34,3 +34,19 @@ puts true || true # true
 
 puts !true #false
 puts !false #true
+
+puts !true && false # false
+puts !(true && false) #true
+
+#while accumulator
+my_number = 0
+
+while true do
+  my_number += 1
+
+  puts my_number
+
+  if my_number == 10
+    break
+  end
+end
