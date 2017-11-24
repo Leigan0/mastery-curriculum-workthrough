@@ -16,3 +16,21 @@ puts 1 >= 1 #true greater than of equal to
 puts 5 <= 10 #true less than or equal to
 puts 5 == 5 #true - equal to
 puts 5 != 6 #true - does not equal
+
+logical operators
+
+puts true && true #true - evaluates to true if both 'true'
+puts false && true #false - evaluates false if one false
+puts true && false #false
+puts false && false #false - evaluates false if both 'false'
+
+#|| once true expression met - no further evaluation
+puts true || false # true - right hand will not evaluate as true condition already met
+puts false || true #true
+puts false || false #false
+puts true || true # true
+
+#! - not
+
+puts !true #false
+puts !false #true
