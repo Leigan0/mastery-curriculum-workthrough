@@ -72,3 +72,15 @@ def odd_numbers_to_100
     end
   end
 end
+
+#introducing strings
+
+todo_1 = String.new("wash the dog")
+todo_1.capitalize
+
+one_string = "1"
+two_string = "2"
+
+one_string + two_string #return 12 - strings concatenate
+
+one_string + 1 # throw an error - cant add different class together - return values are not the same - would need to convert to same class 

@@ -2,7 +2,6 @@ def dice_game
 
 game_count = 0
 
-
   while game_count < 3
     player1 = rand(1..6) * 2
     player2 = rand(1..6) * 2
