@@ -2,9 +2,5 @@
 def greeter
 puts "please enter your name"
 name = gets.chomp.capitalize
-if name.start_with?('S')
-  puts name.upcase
-else
-  puts "Hi #{name} "
-end
+name.start_with?('S') ? name.upcase : "Hi #{name} "
 end
