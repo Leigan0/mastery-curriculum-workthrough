@@ -38,20 +38,18 @@ until next_move == "left" || next_move == "right" || next_move == "forward"
   next_move = gets.chomp.downcase
 end
 
-  if next_move == "left"
+  if next_move == "right"
     puts "You have been attacked by a Goblin, YOU DIE!!!"
     alive = false
-  elsif next_move == "right"
+  elsif next_move == "left"
     puts "You have been eaten by Werewolf, YOU DIE!!!"
     alive = false
-  elsif next_move == "forward" && forward_count == 2
+  elsif next_move == "forward" && forward_count == 1
     puts "You have won!"
     exit
   else
-    puts "You live. You are facing forward, you must choose your next move!"
-    puts "Do you want to go left, right or forward?!?!?"
+    puts "You live."
     forward_count += 1
-    next_move = gets.chomp.downcase
+    next_move = ''
   end
-
 end
