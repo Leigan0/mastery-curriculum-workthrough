@@ -26,30 +26,24 @@
 # If the user enters 'forward', they're told they won and the game exits.
 # If the user enters anything other than 'right', 'left', or 'forward', they just get the message from 4 again.
 
-next_move = ""
 forward_count = 0
-alive = true
 
-while alive == true
+while true do
 
-until next_move == "left" || next_move == "right" || next_move == "forward"
   puts "You are facing forward, you must choose your next move!"
   puts "Do you want to go left, right or forward?!?!?"
   next_move = gets.chomp.downcase
-end
+
 
   if next_move == "right"
     puts "You have been attacked by a Goblin, YOU DIE!!!"
-    alive = false
+    break
   elsif next_move == "left"
     puts "You have been eaten by Werewolf, YOU DIE!!!"
-    alive = false
+    break
   elsif next_move == "forward" && forward_count == 1
     puts "You have won!"
-    exit
-  else
-    puts "You live."
-    forward_count += 1
-    next_move = ''
+    break
   end
+  forward_count += 1
 end
