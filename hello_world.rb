@@ -316,3 +316,45 @@ make_cake(false)
 
    score_accumulator.to_f / scores.length
  end
+
+#introducing classes
+
+# add method to string class called say_hi_to with one parameter
+
+class String
+  def say_hi_to(name)
+    "Hi #{name}"
+  end
+ end
+ my_object = ""
+ my_object.say_hi_to("Lei")
+
+ # => "Hi Lei"
+
+# if we did not return self would not be able to access elements within array instance
+# in order to calculate the averages - as method will be available on instances.
+
+arr = [1,2,3]
+
+ class Array
+  def average
+    return self
+  end
+end
+
+arr.average
+# => [1,2.3] - get the array instance itself back when we call self  allows us to
+# write an average method within array class
+
+class Array
+ def average
+    accumulator = 0
+    self.each do |element|
+        accumulator += element
+      end
+      accumulator.to_f / self.length
+    end
+  end
+arr.average
+
+# => 2
