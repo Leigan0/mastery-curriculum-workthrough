@@ -1,5 +1,6 @@
 class Robot
-  def legs=(number_of_legs)
+  
+  def initialize(number_of_legs)
     @number_of_legs = number_of_legs
   end
 
